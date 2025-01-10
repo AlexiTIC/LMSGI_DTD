@@ -1,0 +1,10 @@
+<!-- DTD per esdeveniments -->
+<!ELEMENT esdeveniments (esdeveniment+)>
+<!ELEMENT esdeveniment (grup, lloc, data, entrada)>
+<!ELEMENT grup (#PCDATA)>
+<!ELEMENT lloc (#PCDATA)>
+<!-- El element data puede contener fecha con o sin hora (YYYY-MM-DD [HH:mm]) -->
+<!ELEMENT data (#PCDATA)>
+<!-- El element entrada contiene el precio en formato decimal -->
+<!ELEMENT entrada (#PCDATA)>
+<!ATTLIST entrada gratuita (si|no) "no">

@@ -1,0 +1,66 @@
+<!--
+<!ELEMENT cataleg (llista_actors, llista_pelicules, llisa_recomanacions_pelicules)>
+
+<!ELEMENT llista_actors (actor+)>
+<!ELEMENT actor (nom, edat?)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT edat (#PCDATA)>
+<!ATTLIST actor id ID #REQUIRED>
+
+<!ELEMENT llista_pelicules (pelicula+)>
+<!ELEMENT pelicula (titol, any, director, actors)>
+<!ATTLIST pelicula id ID #REQUIRED>
+<!ELEMENT titol (#PCDATA)>
+<!ATTLIST titol idioma CDATA #REQUIRED>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT any (#PCDATA)>
+<!ELEMENT actors (actor_ref+)>
+<!ELEMENT actor_ref EMPTY>
+<!ATTLIST actor_ref ref IDREF #REQUIRED>
+
+<!ELEMENT llista_recomanacions_pelicules (recomanacio+)>
+<!ELEMENT recomanacio EMPTY>
+<!ATTLIST recomanacio ref IDREF #REQUIRED>
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<cataleg>
+    <llista_actors>
+        <actor id="ACT001">
+            <nom>Brad Pitt</nom>
+            <edat>60</edat>
+        </actor>
+        <actor id="ACT002">
+            <nom>Penélope Cruz</nom>
+            <edat>49</edat>
+        </actor>
+        <actor id="ACT003">
+            <nom>Tom Hanks</nom>
+			<edat>66</edat>
+        </actor>
+    </llista_actors>
+
+    <llista_pelicules>
+        <pelicula id="PEL001">
+            <titol idioma="en">Fight Club</titol>
+            <any>1999</any>
+            <director>David Fincher</director>
+            <actors>
+                <actor_ref ref="ACT001"/>
+            </actors>
+        </pelicula>
+        <pelicula id="PEL002">
+            <titol idioma="es">Volver</titol>
+            <any>2006</any>
+            <director>Pedro Almodóvar</director>
+            <actors>
+                <actor_ref ref="ACT002"/>
+            </actors>
+        </pelicula>
+    </llista_pelicules>
+
+    <llisa_recomanacions_pelicules>
+        <recomanacio ref="PEL001"/>
+        <recomanacio ref="PEL002"/>
+    </llisa_recomanacions_pelicules>
+</cataleg>
