@@ -59,8 +59,8 @@
         </pelicula>
     </llista_pelicules>
 
-    <llisa_recomanacions_pelicules>
+    <llista_recomanacions_pelicules>
         <recomanacio ref="PEL001"/>
         <recomanacio ref="PEL002"/>
-    </llisa_recomanacions_pelicules>
+    </llista_recomanacions_pelicules>
 </cataleg>
