@@ -1,3 +1,27 @@
+<!-- 
+<?xml version="1.0" encoding="UTF-8"?>
+<esdeveniments>
+    <esdeveniment>
+		<grup>Oques grasses</grup>
+		<lloc>Teatre Lliure</lloc>
+		<data>2025-02-14 22:30</data>
+		<entrada gratuita="si"/>
+	</esdeveniment>
+	<esdeveniment>
+		<grup>Zoo</grup>
+		<lloc>Zoo de Barcelona</lloc>
+		<data>2025-02-15 10:00</data>
+		<entrada gratuita="no">10</entrada>
+	</esdeveniment>
+	<esdeveniment>
+		<grup>Txarango</grup>
+		<lloc>Teatre Lliure</lloc>
+		<data>2025-02-16 20:00</data>
+		<entrada gratuita="no">15</entrada>
+	</esdeveniment>
+</esdeveniments>
+-->
+
 <!-- DTD per esdeveniments -->
 <!ELEMENT esdeveniments (esdeveniment+)>
 <!ELEMENT esdeveniment (grup, lloc, data, entrada)>
@@ -6,5 +30,5 @@
 <!-- El element data puede contener fecha con o sin hora (YYYY-MM-DD [HH:mm]) -->
 <!ELEMENT data (#PCDATA)>
 <!-- El element entrada contiene el precio en formato decimal -->
-<!ELEMENT entrada (#PCDATA)>
+<!ELEMENT entrada (#PCDATA?)>
 <!ATTLIST entrada gratuita (si|no) "no">
